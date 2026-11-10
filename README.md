@@ -1,7 +1,7 @@
 # MightySites for Joomla 5/6（v4.0.0）
 
  MightySites 多站点组件 + 系统插件从 Joomla 3 移植到 **Joomla 5 / Joomla 6**（要求 PHP 8.1+）。
-原始 J3 代码未做任何改动，全部新代码位于本 `joomla6/` 目录。
+
 
 ## 包内容
 
