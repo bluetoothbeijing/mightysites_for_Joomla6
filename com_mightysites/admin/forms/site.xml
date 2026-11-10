@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldprefix="AlterBrains\Component\MightySites\Administrator\Field">
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+			readonly="true" class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"/>
+
+		<field name="domain" type="text" size="40" required="true"
+			label="COM_MIGHTYSITES_FIELD_DOMAIN" description="COM_MIGHTYSITES_FIELD_DOMAIN_DESC" />
+
+		<field name="aliases" type="textarea" default="" cols="40" rows="5" filter="raw"
+			label="COM_MIGHTYSITES_FIELD_ALIASES" description="COM_MIGHTYSITES_FIELD_ALIASES_DESC" />
+
+		<field name="source_config" type="mightysite" database="false" required="true" default="1"
+			label="COM_MIGHTYSITES_FIELD_SOURCE_CONFIG" description="COM_MIGHTYSITES_FIELD_SOURCE_CONFIG_DESC">
+				<option value="">COM_MIGHTYSITES_SELECT_SITE</option>
+		</field>
+
+		<field name="source_db" type="mightydatabase"
+			label="COM_MIGHTYSITES_FIELD_SOURCE_DB" description="COM_MIGHTYSITES_FIELD_SOURCE_DB_DESC">
+				<option value="">COM_MIGHTYSITES_SELECT_DATABASE</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="database">
+		<field name="db" type="text" size="40" required="true"
+			label="COM_MIGHTYSITES_FIELD_DB" description="COM_MIGHTYSITES_FIELD_DB_DESC" />
+
+		<field name="dbprefix" type="text" size="40" required="true"
+			label="COM_MIGHTYSITES_FIELD_DBPREFIX" description="COM_MIGHTYSITES_FIELD_DBPREFIX_DESC" />
+
+		<field name="user" type="text" size="40" required="true"
+			label="COM_MIGHTYSITES_FIELD_USER" description="COM_MIGHTYSITES_FIELD_USER_DESC" />
+
+		<field name="password" type="password" size="40" autocomplete="off" filter="raw"
+			label="COM_MIGHTYSITES_FIELD_PASSWORD" description="COM_MIGHTYSITES_FIELD_PASSWORD_DESC" />
+
+		<field name="dbtype" type="databaseconnection" class="input-medium" filter="string" required="true" default="mysqli" readonly="true"
+			label="COM_MIGHTYSITES_FIELD_DBTYPE" description="COM_MIGHTYSITES_FIELD_DBTYPE_DESC" />
+	</fieldset>
+
+	<fields name="params">
+
+		<fieldset name="overrides">
+
+			<field name="language" type="language" default="" client="site"
+				label="COM_MIGHTYSITES_FIELD_LANGUAGE" description="COM_MIGHTYSITES_FIELD_LANGUAGE_DESC">
+					<option value="">JOPTION_USE_DEFAULT</option>
+			</field>
+
+			<field name="home" type="text" default="" size="6" class="input-mini"
+				label="COM_MIGHTYSITES_FIELD_HOMEPAGE" description="COM_MIGHTYSITES_FIELD_HOMEPAGE_DESC">
+					<option value="">JOPTION_USE_DEFAULT</option>
+			</field>
+
+			<field name="template" type="templatestyle" default="" client="site"
+				label="COM_MIGHTYSITES_FIELD_TEMPLATE" description="COM_MIGHTYSITES_FIELD_TEMPLATE_DESC">
+					<option value="">JOPTION_USE_DEFAULT</option>
+			</field>
+
+			<field name="force_template" type="radio" default="0" class="btn-group btn-group-yesno"
+				label="COM_MIGHTYSITES_FIELD_FORCE_TEMPLATE" description="COM_MIGHTYSITES_FIELD_FORCE_TEMPLATE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+			</field>
+
+			<field name="hidemenus" type="menu" clientid="0" size="15" multiple="true"
+				label="COM_MIGHTYSITES_FIELD_REMOVE_MENUS" description="COM_MIGHTYSITES_FIELD_REMOVE_MENUS_DESC" />
+
+			<field name="onlymenus" type="menu" clientid="0" size="15" multiple="true" default=""
+				label="COM_MIGHTYSITES_FIELD_ONLY_MENUS" description="COM_MIGHTYSITES_FIELD_ONLY_MENUS_DESC" />
+
+			<field name="hidemenuitems" type="menuitemstree" multiple="true" filter="array"
+				label="COM_MIGHTYSITES_FIELD_REMOVE_MENUITEMS" description="COM_MIGHTYSITES_FIELD_REMOVE_MENUITEMS_DESC" />
+
+			<field name="onlymenuitems" type="menuitemstree" multiple="true" filter="array"
+				label="COM_MIGHTYSITES_FIELD_ONLY_MENUITEMS" description="COM_MIGHTYSITES_FIELD_ONLY_MENUITEMS_DESC" />
+
+			<field name="hidemodules" type="sql" size="15" multiple="true" query="SELECT id, CONCAT(position, ' :: ', title) AS name FROM #__modules WHERE position != '' AND client_id=0 ORDER BY position, title" key_field="id" value_field="name"
+				label="COM_MIGHTYSITES_FIELD_REMOVE_MODULES" description="COM_MIGHTYSITES_FIELD_REMOVE_MODULES_DESC" />
+
+			<field name="onlymodules" type="sql" size="15" multiple="true" query="SELECT id, CONCAT(position, ' :: ', title) AS name FROM #__modules WHERE position != '' AND client_id=0 ORDER BY position, title" key_field="id" value_field="name"
+				label="COM_MIGHTYSITES_FIELD_ONLY_MODULES" description="COM_MIGHTYSITES_FIELD_ONLY_MODULES_DESC" />
+
+			<field name="hideplugins" type="mightyplugins" size="15" multiple="true"
+				label="COM_MIGHTYSITES_FIELD_REMOVE_PLUGINS" description="COM_MIGHTYSITES_FIELD_REMOVE_PLUGINS_DESC" />
+
+			<field name="hidecontentcats" type="category" extension="com_content" size="15" multiple="true"
+				label="COM_MIGHTYSITES_FIELD_REMOVE_CONTENT_CATS" description="COM_MIGHTYSITES_FIELD_REMOVE_CONTENT_CATS_DESC" />
+
+			<field name="onlycontentcats" type="category" extension="com_content" size="15" multiple="true" default=""
+				label="COM_MIGHTYSITES_FIELD_ONLY_CONTENT_CATS" description="COM_MIGHTYSITES_FIELD_ONLY_CONTENT_CATS_DESC" />
+
+			<field name="custom_css" type="textarea" default="" cols="40" rows="5" filter="raw"
+				label="COM_MIGHTYSITES_FIELD_CSS" description="COM_MIGHTYSITES_FIELD_CSS_DESC" />
+
+			<field name="custom_js" type="textarea" default="" cols="40" rows="5" filter="raw"
+				label="COM_MIGHTYSITES_FIELD_JS" description="COM_MIGHTYSITES_FIELD_JS_DESC" />
+
+			<field name="favicon" type="text" default="" size="50"
+				label="COM_MIGHTYSITES_FIELD_FAVICON" description="COM_MIGHTYSITES_FIELD_FAVICON_DESC" />
+
+			<field name="langoverride" type="radio" default="0" class="btn-group btn-group-yesno"
+				label="COM_MIGHTYSITES_FIELD_LANGOVERRIDE" description="COM_MIGHTYSITES_FIELD_LANGOVERRIDE_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+			</field>
+
+			<field name="cache_path" type="text" default="" size="50"
+				label="COM_MIGHTYSITES_FIELD_CACHE_PATH" description="COM_MIGHTYSITES_FIELD_CACHE_PATH_DESC" />
+
+			<field name="file_path" type="text" default="" size="50"
+				label="COM_MIGHTYSITES_FIELD_FILE_PATH" description="COM_MIGHTYSITES_FIELD_FILE_PATH_DESC" />
+
+			<field name="image_path" type="text" default="" size="50"
+				label="COM_MIGHTYSITES_FIELD_IMAGE_PATH" description="COM_MIGHTYSITES_FIELD_IMAGE_PATH_DESC" />
+
+			<field name="new_usertype" type="sql" default="" query="SELECT id, title FROM #__usergroups ORDER BY lft" key_field="id" value_field="title"
+				label="COM_MIGHTYSITES_FIELD_NEW_USERTYPE" description="COM_MIGHTYSITES_FIELD_NEW_USERTYPE_DESC">
+					<option value="">JOPTION_USE_DEFAULT</option>
+			</field>
+
+			<field name="yootheme_style" type="yoothemestyle"
+				label="COM_MIGHTYSITES_FIELD_YOOTHEME_STYLE" description="COM_MIGHTYSITES_FIELD_YOOTHEME_STYLE_DESC">
+					<option value="">JOPTION_USE_DEFAULT</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="replacements">
+			<field name="enable_replacements" type="radio" default="0" class="btn-group btn-group-yesno"
+				label="COM_MIGHTYSITES_FIELD_ENABLE_REPLACEMENTS" description="COM_MIGHTYSITES_FIELD_ENABLE_REPLACEMENTS_DESC">
+					<option value="0">JDISABLED</option>
+					<option value="1">JENABLED</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="single">
+			<field name="single_login" type="radio" default="0" class="btn-group btn-group-yesno"
+				label="COM_MIGHTYSITES_FIELD_SINGLE_LOGIN" description="COM_MIGHTYSITES_FIELD_SINGLE_LOGIN_DESC" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+			</field>
+
+			<field name="single_logout" type="radio" default="0" class="btn-group btn-group-yesno"
+				label="COM_MIGHTYSITES_FIELD_SINGLE_LOGOUT" description="COM_MIGHTYSITES_FIELD_SINGLE_LOGOUT_DESC">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="advanced">
+			<field name="secret" type="text" size="40"
+				label="COM_MIGHTYSITES_FIELD_SECRET" description="COM_MIGHTYSITES_FIELD_SECRET_DESC" />
+
+			<field name="cookie_domain" type="text" size="40"
+				label="COM_MIGHTYSITES_FIELD_COOKIE_DOMAIN" description="COM_MIGHTYSITES_FIELD_COOKIE_DOMAIN_DESC" />
+
+			<field name="mijoshopid" type="text" size="5" class="input-mini"
+				label="COM_MIGHTYSITES_FIELD_MIJOSHOPID" description="COM_MIGHTYSITES_FIELD_MIJOSHOPID_DESC" />
+
+			<field name="falang" type="radio" default="0" class="btn-group btn-group-yesno"
+				label="COM_MIGHTYSITES_FIELD_FALANG" description="COM_MIGHTYSITES_FIELD_FALANG_DESC" >
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+			</field>
+
+			<field name="admintools_token" type="text" size="40"
+				label="COM_MIGHTYSITES_FIELD_ADMINTOOLS_TOKEN" description="COM_MIGHTYSITES_FIELD_ADMINTOOLS_TOKEN_DESC" />
+		</fieldset>
+	</fields>
+</form>

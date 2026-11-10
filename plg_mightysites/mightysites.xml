@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_MIGHTYSITES</name>
+
+	<author>AlterBrains (ported for Joomla 6)</author>
+	<copyright>(C) 2009-2017 AlterBrains. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>alterbrains@gmail.com</authorEmail>
+	<authorUrl>http://alterbrains.com</authorUrl>
+
+	<creationDate>11/2026</creationDate>
+	<version>4.0.1</version>
+	<description>PLG_SYSTEM_MIGHTYSITES_DESC</description>
+
+	<namespace path="src">AlterBrains\Plugin\System\MightySites</namespace>
+
+	<files>
+		<folder plugin="mightysites">services</folder>
+		<folder>src</folder>
+	</files>
+
+	<scriptfile>script.php</scriptfile>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/plg_system_mightysites.ini</language>
+		<language tag="en-GB">en-GB/plg_system_mightysites.sys.ini</language>
+	</languages>
+</extension>

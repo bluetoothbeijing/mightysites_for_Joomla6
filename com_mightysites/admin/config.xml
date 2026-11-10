@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+	<fieldset name="advanced" label="JGLOBAL_FIELDSET_ADVANCED">
+		<field name="varnish" type="radio" class="btn-group btn-group-yesno" default="0"
+			label="COM_MIGHTYSITES_CONFIG_VARNISH" description="COM_MIGHTYSITES_CONFIG_VARNISH_DESC">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+		</field>
+	</fieldset>
+	<fieldset name="permissions" description="JCONFIG_PERMISSIONS_DESC" label="JCONFIG_PERMISSIONS_LABEL">
+		<field name="rules" type="rules" component="com_mightysites" filter="rules" validate="rules" label="JCONFIG_PERMISSIONS_LABEL" section="component" />
+	</fieldset>
+</config>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset addfieldprefix="AlterBrains\Component\MightySites\Administrator\Field">
+		<field name="id" type="text" default="0" label="JGLOBAL_FIELD_ID_LABEL"
+			readonly="true" class="readonly"
+			description="JGLOBAL_FIELD_ID_DESC"/>
+
+		<field name="domain" type="text" size="40" required="true"
+			label="COM_MIGHTYSITES_FIELD_DATABASE_TITLE" description="COM_MIGHTYSITES_FIELD_DATABASE_TITLE_DESC" />
+
+		<field name="source_db" type="mightydatabase"
+			label="COM_MIGHTYSITES_FIELD_SOURCE_DB" description="COM_MIGHTYSITES_FIELD_SOURCE_DB_DESC">
+			<option value="">COM_MIGHTYSITES_SELECT_DATABASE</option>
+		</field>
+	</fieldset>
+
+	<fieldset name="database">
+		<field name="db" type="text" size="40" required="true"
+			label="COM_MIGHTYSITES_FIELD_DB" description="COM_MIGHTYSITES_FIELD_DB_DESC" />
+
+		<field name="dbprefix" type="text" size="40" required="true"
+			label="COM_MIGHTYSITES_FIELD_DBPREFIX" description="COM_MIGHTYSITES_FIELD_DBPREFIX_DESC" />
+	</fieldset>
+
+	<fields name="params">
+	</fields>
+</form>

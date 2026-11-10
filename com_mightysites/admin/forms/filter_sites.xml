@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="filter">
+		<field
+			name="search"
+			type="text"
+			inputmode="search"
+			label="COM_MIGHTYSITES_FILTER_SEARCH_LABEL"
+			description="COM_MIGHTYSITES_FILTER_SEARCH_DESC"
+			hint="JSEARCH_FILTER"
+		/>
+	</fields>
+	<fields name="list">
+		<field
+			name="limit"
+			type="limitbox"
+			label="COM_MIGHTYSITES_LIST_LIMIT"
+			default="25"
+			class="input-mini input-small"
+		/>
+	</fields>
+</form>

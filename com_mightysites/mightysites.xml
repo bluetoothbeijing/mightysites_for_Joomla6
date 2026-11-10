@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade">
+	<name>com_mightysites</name>
+	<element>com_mightysites</element>
+
+	<author>AlterBrains (ported for Joomla 6)</author>
+	<copyright>(C) 2009-2017 AlterBrains. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>alterbrains@gmail.com</authorEmail>
+	<authorUrl>http://alterbrains.com</authorUrl>
+
+	<creationDate>11/2026</creationDate>
+	<version>4.0.2</version>
+	<description>Joomla multi-site manager (Joomla 6 port).</description>
+
+	<namespace path="src">AlterBrains\Component\MightySites</namespace>
+
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<files folder="site">
+		<filename>mightysites.php</filename>
+	</files>
+
+	<administration>
+		<menu>MightySites</menu>
+		<files folder="admin">
+			<folder>services</folder>
+			<folder>src</folder>
+			<folder>forms</folder>
+			<folder>sql</folder>
+			<folder>tmpl</folder>
+			<folder>images</folder>
+			<folder>language</folder>
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+		</files>
+	</administration>
+
+	<scriptfile>script.php</scriptfile>
+
+</extension>
